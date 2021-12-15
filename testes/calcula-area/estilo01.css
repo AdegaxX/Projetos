@@ -1,0 +1,70 @@
+body {
+    background: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    background-image: url(background1.png);
+    background-position: center;
+    background-size: cover;
+}
+
+p {
+    font:normal 25px Verdana;
+    
+}
+
+p2 {
+    font: normal 20px Arial;
+}
+
+.cx {
+    border:0px solid rgb(252, 252, 252);
+    margin: 0px;
+    display: inline-block;
+    padding:6px 10px;
+    font-size:13px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(220, 224, 224, 0.5);
+    
+}
+
+.bt {
+    border:1px solid #000000;
+    border-radius: 25px;
+    display:inline-block;
+    cursor:pointer;
+    font-family:Verdana;
+    font-weight:bold;
+    font-size:13px;
+    padding:6px 10px;
+    text-decoration:none;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.445);
+    color:white;
+    background-color: rgb(228, 6, 6);
+    }
+
+header {
+    color: white;
+    text-align: center;
+}
+
+input {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.404);
+    margin-bottom: 20px;
+}
+
+footer {
+    color: rgba(255, 255, 255, 0.459);
+    text-align: center;
+    font-style: italic;
+}
