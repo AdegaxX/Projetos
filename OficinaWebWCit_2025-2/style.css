@@ -1,0 +1,66 @@
+body {
+    background-color: rgb(16, 0, 73);
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/*add imagem*/
+.parallax {
+    min-height: 100svh; /* svh é melhor para barras no mobile */
+    background-image: url('https://windowscustomization.com/wp-content/uploads/2018/12/Cyberpunk-2077-1.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Parallax “clássico” */
+    background-attachment: fixed;
+    display: grid;
+    place-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.title {
+    font-family: 'goldman', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    position: relative;
+    overflow: hidden; /* importante para o glitch */
+
+}
+/* Pseudo-elementos para o efeito glitch */
+.title::before,
+.title::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: inherit;
+}
+
+.title::before {
+  left: 2px;
+  text-shadow: -2px 0 red;
+  animation: glitch 2s infinite linear alternate-reverse;
+}
+
+.title::after {
+  left: -2px;
+  text-shadow: -2px 0 cyan;
+  animation: glitch 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch {
+  0% { clip-path: inset(0 0 85% 0); }
+  20% { clip-path: inset(15% 0 60% 0); }
+  40% { clip-path: inset(40% 0 30% 0); }
+  60% { clip-path: inset(70% 0 5% 0); }
+  80% { clip-path: inset(30% 0 50% 0); }
+  100% { clip-path: inset(0 0 85% 0); }
+}
