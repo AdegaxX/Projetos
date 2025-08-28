@@ -1,66 +1,137 @@
+/* APLICA EM TODO A PÁGINA */
+* {
+  text-decoration: none; /* remove a decoração de todos os links (_)*/
+}
+
+
+/* HEADER */
+.barra_sup {
+  height: 10vw;
+  max-height: 60px;
+  min-height: 45px;
+  padding-left: 15px;
+  display: flex;
+  background-color: #242424;
+
+  position: fixed;   /* fixa no lugar */
+  top: 0;            /* gruda no topo */
+  left: 0;           /* começa na esquerda */
+  right: 0;          /* ocupa toda a largura */
+  z-index: 1000;     /* fica acima do conteúdo */
+}
+.logo {
+  display: flex;          /*torna a div flex, facilita umas funções*/
+  align-items: center;    /*centraliza os itens*/
+  gap: 5px;               /*espaço entre a logo e a palavra*/
+}
+.logo_marca {
+  height: 30px;
+  width: auto;
+}
+.letra_logo {
+  font-size: 20px;
+  color: #f47521;
+  font-family: "Jockey One", sans-serif;
+  font-weight: bold;
+}
+.letra_logo:hover {
+  color: white;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+.links a {
+  display: flex;
+  align-items: center;
+  padding-left: 6px;
+  padding-right: 6px;
+  color: white;
+  height: 100%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.links a:hover {
+  background-color: rgb(22, 22, 22);
+}
+
+
+/* SEPARAR AS DIVS DA BARRA SUPERIOR COM UM ESPAÇO FLEX */
+.spacer {
+  flex: 1;
+}
+
+/* ICONES DA DIREITA DA BARRA SUPERIOR */
+.icones {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: 15px;
+}
+.bt_icones {
+  background: none;
+  margin: 0;
+  border: none;
+}
+.icon_pessoa {
+  filter: invert(1);
+  align-items: center;
+  width: 4vw;
+  min-width: 18px;
+  max-width: 25px;
+  display: flex;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+.icon_pesquisa {
+  align-items: center;
+  width: 4vw;
+  display: flex;
+  padding-left: 7px;
+  padding-right: 7px;
+  margin: 0;
+}
+
+.icones:hover {
+  background-color: rgb(22, 22, 22);
+}
+.bt_icones:hover {
+  background-color: rgb(22, 22, 22);
+}
+
+
+/* CONF DO CORPO */
 body {
-    background-color: rgb(16, 0, 73);
-    color: white;
-    margin: 0;
-    padding: 0;
-    height: 100%;
+  margin: 0;
+  background-color: #0f0f0f;
+  color: white;
+  padding: 0;
 }
 
-/*add imagem*/
-.parallax {
-    min-height: 100svh; /* svh é melhor para barras no mobile */
-    background-image: url('https://windowscustomization.com/wp-content/uploads/2018/12/Cyberpunk-2077-1.gif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 
-    /* Parallax “clássico” */
-    background-attachment: fixed;
-    display: grid;
-    place-items: center;
-    color: white;
-    text-align: center;
-    position: relative;
+
+/* PARA DIFERENTES TAMANHOS DE TELA */
+/* TAMANHO M */
+@media (max-width: 780px) {
+  .logo_marca {
+    height: 30px;
+  }
+  .links {
+    display: none;
+  }
 }
 
-.title {
-    font-family: 'goldman', sans-serif;
-    font-size: clamp(2.5rem, 6vw, 6rem);
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    position: relative;
-    overflow: hidden; /* importante para o glitch */
-
-}
-/* Pseudo-elementos para o efeito glitch */
-.title::before,
-.title::after {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  color: inherit;
+/* TAMANHO P */
+@media (max-width: 480px) {
+  .logo_marca {
+    height: 30px;
+  }
+  .letra_logo {
+    display: none;
+  }
 }
 
-.title::before {
-  left: 2px;
-  text-shadow: -2px 0 red;
-  animation: glitch 2s infinite linear alternate-reverse;
-}
 
-.title::after {
-  left: -2px;
-  text-shadow: -2px 0 cyan;
-  animation: glitch 3s infinite linear alternate-reverse;
-}
 
-@keyframes glitch {
-  0% { clip-path: inset(0 0 85% 0); }
-  20% { clip-path: inset(15% 0 60% 0); }
-  40% { clip-path: inset(40% 0 30% 0); }
-  60% { clip-path: inset(70% 0 5% 0); }
-  80% { clip-path: inset(30% 0 50% 0); }
-  100% { clip-path: inset(0 0 85% 0); }
-}
+/* link para icones: https://icons8.com.br/icons/set/pessoas--style-ios-glyphs */

@@ -1,26 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Animes</title>
+    <title>Crunchybar</title>
 
-    <!--Link da font de titulo-->
+    <!-- LINK DA FONTE GOOGLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Zen+Dots&display=swap" rel="stylesheet">
 
-
-    <!--Link do estilo-->
+    <!-- LINK DO ESTILO -->
     <link rel="stylesheet" href="style.css">
 
     
 </head>
 <body>
+
+    <!-- Barra superior -->
+    <header class="topbar" id="topbar">
+
+        <nav class="barra_sup">
+            <a href="#" class="logo">
+                <img class="logo_marca" src="https://cdn.worldvectorlogo.com/logos/ubuntu-4.svg" alt="Logo">
+                <span class="letra_logo">Crunchybar</span>
+            </a>
+
+            <div class="links" id="navLinks">
+                <a href="#home">Início</a>
+                <a href="#contatos">Contatos</a>
+                <a href="#org">Organização</a>
+            </div>
+
+            <!-- DIV PARA CRIAR ESPAÇO -->
+            <div class="spacer"></div>
+
+            <button class="bt_icones">
+                <img class="icon_pesquisa" src="imgs/lupa.png" alt="Lupa pesquisa" title="Pesquisar">
+            </button>
+            <a class="icones" href="#"><img class="icon_pessoa" src="https://img.icons8.com/?size=100&id=60023&format=png&color=000000" alt="Icone pessoa" title="Perfil"></a>
+            
+
+            <!-- 3 TRAÇOS -->
+            <button class="burger" id="burger" aria-label="Abrir menu" aria-controls="navLinks" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
     <main>
+
+        <section class="principal">
+            <div>
+
+            </div>
+        </section>
+
+    </main>
         <!-- seção parallax -->
         <section class="parallax">
-            <div>
-                <h1 class="title" data-text="CYBERPUNK">Cyberpunk</h1>
-            </div>
         </section>
 
         <!-- outra seção -->
@@ -34,8 +76,32 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium officia hic architecto voluptas esse, deleniti soluta natus repellendus accusamus possimus ipsam itaque velit nemo pariatur consequuntur perspiciatis fugiat omnis in.</p>
         </section>
 
-    </main>
+<section>
+            <h1>mais um teste aqui</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium officia hic architecto voluptas esse, deleniti soluta natus repellendus accusamus possimus ipsam itaque velit nemo pariatur consequuntur perspiciatis fugiat omnis in.</p>
+        </section>
+        <section>
+            <h1>mais um teste aqui</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium officia hic architecto voluptas esse, deleniti soluta natus repellendus accusamus possimus ipsam itaque velit nemo pariatur consequuntur perspiciatis fugiat omnis in.</p>
+        </section>
+        <section>
+            <h1>mais um teste aqui</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium officia hic architecto voluptas esse, deleniti soluta natus repellendus accusamus possimus ipsam itaque velit nemo pariatur consequuntur perspiciatis fugiat omnis in.</p>
+        </section>
+        <section>
+            <h1>mais um teste aqui</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium officia hic architecto voluptas esse, deleniti soluta natus repellendus accusamus possimus ipsam itaque velit nemo pariatur consequuntur perspiciatis fugiat omnis in.</p>
+        </section>
 
+
+    <footer>
+        <div class="wrap">
+            <p>&copy; <span id="ano"></span> Crunchybar &ndash; sua plataformas de streaming com os melhores animes.</p>
+            <nav> <a href="#">Termos</a> &bull; <a href="#">Privacidade</a> &bull; <a href="#">Suporte</a> </nav>
+        </div>
+    </footer>
+
+    <!--LINK PARA O JAVASCRIPT-->
     <script src="script.js"></script>
 
 </body>
