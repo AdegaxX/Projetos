@@ -1,48 +1,64 @@
 /* APLICA EM TODO A PÁGINA */
 * {
-  text-decoration: none; /* remove a decoração de todos os links (_)*/
+  text-decoration: none;              /* remove a decoração de todos os links (_)*/
 }
 
 
 /* HEADER */
+header {
+  width: 100%;
+  max-height: 60px;
+  min-height: 35px;
+  height: 10vw;
+}
+
 .barra_sup {
+  margin: 0;
+  width: 100%;
   height: 10vw;
   max-height: 60px;
-  min-height: 45px;
-  padding-left: 15px;
+  min-height: 35px;
   display: flex;
   background-color: #242424;
+  align-items: center;
 
-  position: fixed;   /* fixa no lugar */
-  top: 0;            /* gruda no topo */
-  left: 0;           /* começa na esquerda */
-  right: 0;          /* ocupa toda a largura */
-  z-index: 1000;     /* fica acima do conteúdo */
+  position: fixed;                  /* fixa no lugar */
+  z-index: 1000;                    /* fica acima do conteúdo */
 }
+
 .logo {
-  display: flex;          /*torna a div flex, facilita umas funções*/
-  align-items: center;    /*centraliza os itens*/
-  gap: 5px;               /*espaço entre a logo e a palavra*/
+  display: flex;                    /*torna a div flex, facilita umas funções*/
+  height: 100%;
+  align-items: center;              /*centraliza os itens*/
+  gap: 5px;                         /*espaço entre a logo e a palavra*/
+  margin: 0;
+  padding: 0;
 }
+
 .logo_marca {
-  height: 30px;
-  width: auto;
+  font-size: 2rem;                  /*1rem = 18px*/
+  line-height: 1;                   /*evita sair da linha dele*/
+  padding-left: 10px;
+  margin: auto;
 }
+
 .letra_logo {
   font-size: 20px;
-  color: #f47521;
+  color: #009e1a;
   font-family: "Jockey One", sans-serif;
   font-weight: bold;
 }
+
 .letra_logo:hover {
   color: white;
 }
 
 .links {
   display: flex;
-  align-items: center;
-  margin-left: 15px;
+  align-self: stretch;              /*estica a div onde está os links verticalmente*/
+  margin-right: 10px;
 }
+
 .links a {
   display: flex;
   align-items: center;
@@ -52,52 +68,52 @@
   height: 100%;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+
 .links a:hover {
   background-color: rgb(22, 22, 22);
+}
+
+
+/* BOTÃO BURGER */
+.burger {
+  display: none;
+  background: none;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.burger .bar {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 4px;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.burger .bar:nth-child(1) { top: 12px; }
+.burger .bar:nth-child(2) { top: 19px; }
+.burger .bar:nth-child(3) { top: 26px; }
+
+.burger.open .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.burger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+.burger.open .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 
 /* SEPARAR AS DIVS DA BARRA SUPERIOR COM UM ESPAÇO FLEX */
 .spacer {
   flex: 1;
-}
-
-/* ICONES DA DIREITA DA BARRA SUPERIOR */
-.icones {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  margin-right: 15px;
-}
-.bt_icones {
-  background: none;
-  margin: 0;
-  border: none;
-}
-.icon_pessoa {
-  filter: invert(1);
-  align-items: center;
-  width: 4vw;
-  min-width: 18px;
-  max-width: 25px;
-  display: flex;
-  padding-left: 7px;
-  padding-right: 7px;
-}
-.icon_pesquisa {
-  align-items: center;
-  width: 4vw;
-  display: flex;
-  padding-left: 7px;
-  padding-right: 7px;
-  margin: 0;
-}
-
-.icones:hover {
-  background-color: rgb(22, 22, 22);
-}
-.bt_icones:hover {
-  background-color: rgb(22, 22, 22);
 }
 
 
@@ -110,15 +126,134 @@ body {
 }
 
 
+footer {
+  height: 200px;
+  display: flex;
+  background-color: rgb(29, 29, 29);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+footer p {
+  font-size: 15px;
+  margin: auto;
+  text-align: center;
+  color: rgb(211, 211, 211);
+}
+footer a {
+  color: rgb(211, 211, 211);
+  font-size: 13px;
+}
+
+
+/*CARROSSEL DE IMAGENS/JOGOS*/
+
+h2 {
+  margin: 20px;
+}
+
+.carrossel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px;
+  gap: 15px;
+  height: 400px;
+}
+
+.jogo {
+  justify-content: center;
+  max-width: 200px;
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: transform 0.5s;
+}
+
+.jogo:hover {
+  transform: scale(1.02);
+}
+
+.jogo img {
+  height: 300px;
+  display: flex;
+}
+
+.info {
+  gap: 6px;
+  padding: 5px;
+}
+
+.info h3 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 5px;
+  margin: 4px;
+}
+
+.botoes button {
+  background: #e50914;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.botoes button:hover {
+  background: #b00610;
+}
+
 
 /* PARA DIFERENTES TAMANHOS DE TELA */
 /* TAMANHO M */
-@media (max-width: 780px) {
-  .logo_marca {
-    height: 30px;
+@media (max-width: 720px) {
+  .nav {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
   }
   .links {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: #333;
+    border-bottom: 1px solid #ffffff1a;
+    color: white;
+    margin: 0;
+    align-self: auto;
+  }
+  .links.open {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-self: center;
+  }
+  .links.open a {
+    padding: 10px;
+    color: #fff;
+    justify-content: center;
+    align-self: center;
+    border-radius: 5px;
+  }
+  .links.open a:hover {
+    color: white;
+  }
+  .burger { 
+    display: flex;
   }
 }
 
