@@ -1,15 +1,15 @@
 /* APLICA EM TODO A PÁGINA */
 * {
   text-decoration: none;              /* remove a decoração de todos os links (_)*/
+  color: white;
 }
 
 
 /* HEADER */
 header {
   width: 100%;
-  max-height: 60px;
-  min-height: 35px;
-  height: 10vw;
+  height: 60px;
+  min-height: 60px;
 }
 
 .barra_sup {
@@ -293,9 +293,65 @@ h2 {
 }
 
 
+/*YOUTUBE GAMEPLAY*/
+.gameplay {
+  display: flex;
+  margin: 0 auto;
+  width: 60vw;
+  height: 30vw;
+}
+.gameplay iframe {
+  min-width: 400px;
+  min-height: 200px;
+  width: 100%;
+  height: 100%;
+}
+
+
+
 /* PARA DIFERENTES TAMANHOS DE TELA */
+
 /* TAMANHO M */
 @media (max-width: 720px) {
+
+  html, body {
+    height: 100%;       /* ocupa toda a tela */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  main {
+    flex: 1; /* empurra o footer para baixo */
+  }
+
+
+  footer {
+    height: 40px;
+    background-color: rgb(29, 29, 29);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(211, 211, 211);
+  }
+  footer p, footer a {
+    font-size: 12px;
+  }
+
+
+  header {
+    height: auto;
+    min-height: 40px;
+    max-height: 60px;
+  }
+  .barra_sup {
+    height: auto;
+    min-height: 40px;
+    max-height: 60px;
+  }
+
+
   .nav {
     position: relative;
     width: 100%;
@@ -334,7 +390,26 @@ h2 {
   .burger { 
     display: flex;
   }
+
+
+  .gameplay {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .gameplay iframe {
+    padding: 0;
+    justify-content: center;
+    min-width: 300px;
+    min-height: 150px;
+    width: 100%;
+    height: 100%;
+  }
 }
+
 
 /* TAMANHO P */
 @media (max-width: 480px) {
@@ -343,6 +418,109 @@ h2 {
   }
   .letra_logo {
     display: none;
+  }
+
+
+  h1, h2, h3 {
+    font-size: 20px;
+  }
+
+
+  html, body {
+    height: 100%;       /* ocupa toda a tela */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    font-size: 12px;
+  }
+
+
+  main {
+    flex: 1;            /* empurra o footer para baixo */
+  }
+
+
+  footer {
+    height: 30px;
+    background-color: rgb(29, 29, 29);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(211, 211, 211);
+  }
+  footer p, footer a {
+    font-size: 10px;
+  }
+
+
+  header {
+    height: auto;
+    min-height: 40px;
+    max-height: 60px;
+  }
+  .barra_sup {
+    height: auto;
+    min-height: 40px;
+    max-height: 60px;
+  }
+
+
+  .nav {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+  .links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: #333;
+    border-bottom: 1px solid #ffffff1a;
+    color: white;
+    margin: 0;
+    align-self: auto;
+  }
+  .links.open {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-self: center;
+  }
+  .links.open a {
+    padding: 10px;
+    color: #fff;
+    justify-content: center;
+    align-self: center;
+    border-radius: 5px;
+  }
+  .links.open a:hover {
+    color: white;
+  }
+  .burger { 
+    display: flex;
+  }
+  
+
+  .gameplay {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .gameplay iframe {
+    padding: 0;
+    justify-content: center;
+    min-width: 300px;
+    min-height: 150px;
+    width: 100%;
+    height: 100%;
   }
 }
 
