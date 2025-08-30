@@ -1,0 +1,210 @@
+
+Oficina Web WCit 2025.2
+
+Tags e suas funções:
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::  CSS  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+text-decoration: none;					# Remove decorações de texto (ex.: sublinhado de links) para tudo.
+
+width: 100%;						# Largura total da janela.
+
+height: 60px;						# Altura fixa de 60px.
+
+min-height: 60px;					# Garante pelo menos 60px de altura (mesmo se conteúdo for menor).
+
+height: 10vw;						# Altura proporcional à largura da viewport (10% da largura da tela).
+
+display: flex;						# Usa Flexbox para alinhar os itens internos.  (alinhamento facilitado)
+
+align-items: center;					# Alinha os itens verticalmente ao centro no eixo cruzado.
+
+justify-content: center;				# Centraliza horizontalmente.
+
+text-align: center;					# Texto centralizado.
+
+position: fixed;					# Fixa a barra na janela (sai do fluxo normal).
+
+padding: 0;						# Margem para "dentro".
+
+gap: 5px;						# Espaço entre elementos filhos (ícone e texto).
+
+font-size: 2rem;					# Tamanho de fonte relativo (2 × font-size base).
+
+line-height: 1;						# Altura da linha igual à altura da fonte (evita “pular”).
+
+padding-left: 10px;					# Espaço interno à esquerda.
+
+margin: auto;						# Margem automática (usada aqui pra auxiliar alinhamento dentro do flex).
+
+align-self: stretch;					# Este elemento se estica na altura do contêiner flex pai.
+
+border-radius: 10px;					# Cantos arredondados.
+
+position: relative;					# Necessário para posicionar as barras internas.
+
+cursor: pointer;					# Cursor de clique.
+
+left: 10px;						# Distância da esquerda.
+
+transition: transform 0.25s ease, opacity 0.2s ease;	# Animações suaves para transformação/opacity.
+
+.burger .bar:nth-child(1) { top: 12px; }		# Posiciona a 1ª barra a 12px do topo.
+
+.burger .bar:nth-child(2) { top: 19px; }		# 2ª barra a 19px.
+
+.burger .bar:nth-child(3) { top: 26px; }		# 3ª barra a 26px.
+
+transform: translateY(7px) rotate(45deg);		# Move para baixo e gira 45°, formando o “X”.
+
+transform: translateY(-7px) rotate(-45deg);		# Sobe e gira -45°, formando o outro traço do “X”.
+
+flex: 1;						# Ocupa o espaço disponível, empurrando os links.
+
+height: 100%;						# Altura total da viewport.
+
+flex-direction: column;					# Direção vertical (coluna).
+
+letter-spacing: 1.4px;					# Espaçamento entre letras.
+
+position: relative;					# Base para posicionamento absoluto dos botões.
+
+overflow-x: auto;					# Habilita rolagem horizontal.
+
+scroll-behavior: smooth;				# Rolagem suave.
+
+scrollbar-width: none;					# Esconde barra de rolagem no Firefox.
+
+.carrossel::-webkit-scrollbar {
+  display: none;					# Esconde barra de rolagem no chrome.
+}
+
+position: absolute;					# Posiciona em relação a .car_botao.
+
+top: 50%;						# Posição vertical no meio.
+
+transform: translateY(-50%);				# Ajuste fino para centralizar.
+
+filter: brightness(0) invert(1);			# Deixa o ícone branco.
+
+filter: invert(1);					# Pode inverter a cor também.
+
+overflow: hidden;					# Clipa conteúdo (importante p/ bordas arredondadas em imagens).
+
+flex-shrink: 0;						# Impede encolher quando falta espaço.
+
+transition: transform 0.5s;				# Animação suave do scale no hover.
+
+transform: scale(1.05);					# Efeito “zoom” ao passar o mouse.
+
+display: block;						# Remove espaço extra de imagens inline.
+
+max-width: 100%;					# Não ultrapassa a largura do card.
+
+object-fit: cover;					# Corta/zoom para preencher sem distorcer.
+
+justify-content: space-between;				# Espaço entre botões.
+
+margin: 0 auto;						# Centraliza horizontalmente.
+
+
+
+Margin, Padding, etc:
+			Quando usam 2 valores
+				* Primeiro valor -> topo e base (vertical)
+				* Segundo valor -> esquerda e direita (horizontal)
+
+			Quando usam 3 valores
+				* Primeiro valor -> topo
+				* Segundo valor -> esquerda e direita
+				* Terceiro valor -> baixo
+
+			Quando usam 4 valores
+				* Primeiro valor -> topo
+				* Primeiro valor -> direita
+				* Primeiro valor -> baixo
+				* Primeiro valor -> esquerda
+
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::  JS  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+const burger = document.getElementById('burger');			# Pega o botão hamburguer pelo id burger e guarda na constante burger.
+
+const links = document.getElementById('navLinks');			# Pega o contêiner dos links do menu pelo id navLinks.
+
+if (burger && links) {							# Garante que os dois elementos existem antes de anexar eventos (evita erro).
+
+  burger.addEventListener('click', () => {				# Adiciona ouvintes de clique no botão burger.
+
+    const isOpen = links.classList.toggle('open');			# Alterna a classe open em links. Retorna true se adicionou (menu abriu) e false se removeu.
+
+    burger.classList.toggle('open', isOpen);				# Alterna a classe open no próprio botão, em sincronia com isOpen (pra animar as barras).
+
+    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');	# Atualiza atributo de acessibilidade dizendo se o menu está expandido.
+
+  });
+
+ links.querySelectorAll('a').forEach(a => {				# Seleciona todos os <a> dentro de links e itera.
+
+    a.addEventListener('click', () => {					# Para cada link, adiciona evento de clique.
+
+      links.classList.remove('open');					# Fecha o menu removendo a classe open.
+
+      burger.classList.remove('open');					# Reseta o estado visual do botão (tira o “X”).
+
+      burger.setAttribute('aria-expanded', 'false');			# Atualiza acessibilidade indicando “fechado”.
+
+    });									# Fecha a callback do clique no link.
+
+  });									# Fecha o forEach.
+
+}									# Fecha o if (burger && links).
+
+
+// Botões do carrossel:
+
+const carrossel = document.getElementById("carrossel");			# Referência ao trilho rolável do carrossel pelo id.
+
+const botaoesquerda = document.querySelector(".botao.esquerda");	# Seleciona o botão com classes .botao e .esquerda.
+
+const botaodireita = document.querySelector(".botao.direita");		# Seleciona o botão com classes .botao e .direita.
+
+botaoesquerda.addEventListener("click", () => {				# Ouve cliques no botão da esquerda.
+
+  carrossel.scrollBy({ left: -220, behavior: "smooth" }); 		# Rola o carrossel 220px para a esquerda de forma suave.
+
+});									# Fecha a callback do botão esquerdo.
+
+botaodireita.addEventListener("click", () => {				# Ouve cliques no botão da direita.
+
+  carrossel.scrollBy({ left: 220, behavior: "smooth" }); 		# Rola o carrossel 220px para a direita de forma suave.
+
+});									# Fecha a callback do botão direito.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
