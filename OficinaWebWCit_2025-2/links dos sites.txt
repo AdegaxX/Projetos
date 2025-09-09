@@ -1,0 +1,84 @@
+
+
+Oficina WCit 2025.2
+
+
+Links para o HTML:
+
+
+Ícone navegador:
+https://static.vecteezy.com/system/resources/previews/029/338/050/non_2x/3d-joystick-on-a-transparent-background-free-png.png
+
+
+<!-- LINK DA FONTE GOOGLE -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Jockey+One&family=TASA+Explorer:wght@400..800&family=Zen+Dots&display=swap" rel="stylesheet">
+
+
+Botão ESQUERDA:
+https://img.icons8.com/?size=100&id=98961&format=png&color=000000
+
+
+Botão DIREITA:
+https://img.icons8.com/?size=100&id=99266&format=png&color=000000
+
+
+Imagem botão CARRINHO DE COMPRAS:
+https://img.icons8.com/?size=100&id=59997&format=png&color=000000
+
+
+Capas dos jogos:
+
+
+jogo1:					DOOM THE DARK AGES
+https://image.api.playstation.com/vulcan/ap/rnd/202501/1405/346673e154a94c7d1dba15de4040b8f148dd3aafda800100.png
+
+
+Jogo2:					CYBERPUNK 2077
+https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077_CDPROJEKTRED_S2_03_1200x1600-b1847981214ac013383111fc457eb9c5
+
+
+Jogo3:					HOLLOW KNIGHT
+https://www.europanet.com.br/upload/id_produto/60_____/6001605g.jpg
+
+
+Jogo4:					COD MODERN WARFARE III
+https://www.flowgames.gg/wp-content/uploads/2023/08/MWIII-REVEAL-BENEFITS-006.jpg
+
+
+Jogo5:					ATLAS FALLEN
+https://cdn.awsli.com.br/600x700/2739/2739953/produto/300890645/atlasfallen-94fbs1l06k.jpg
+
+
+Jogo6:					GTA V
+https://upload.wikimedia.org/wikipedia/pt/8/80/Grand_Theft_Auto_V_capa.png
+
+
+Jogo7:					BLASPHEMOUS
+https://cdn1.epicgames.com/offer/eddb735dde6b47cda8193f2643cff886/EGS_Blasphemous_TheGameKitchen_S6_1200x1600-37265bbc691109595a2ff9b0c21ba8c7
+
+
+Jogo8:					HELLDIVERS II
+https://helldivers.wiki.gg/images/HD2_SteamLibrary-Portrait.jpg?ffffe7
+
+
+Adicionar o vídeo na página:
+<iframe src="https://www.youtube.com/embed/S3k04zt744M?si=MlrX-TgQBmR-EQCh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+Link para comprar jogo na STEAM:
+https://store.steampowered.com/app/3017860/DOOM_The_Dark_Ages/
+
+
+
+
+
+
+
+
+
+
+
+
+
